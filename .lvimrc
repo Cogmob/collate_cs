@@ -1,0 +1,3 @@
+let root = expand('%:p:h')
+nmap <leader>j :wall<CR> :call VimuxRunCommand(
+\    'cd ' . root . ' ; clear ; ./collate.sh')<CR>
