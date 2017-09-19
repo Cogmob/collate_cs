@@ -9,6 +9,7 @@ def _(address, class_name, files, namespace_depth):
             methods[filename] = process_file._(f.read())
 
     ret = 'namespace ' + '.'.join(address[namespace_depth:])
+    ret += "\n{"
 
     if 'test' in class_name:
         ret += "\n    using NUnit.Framework;"
