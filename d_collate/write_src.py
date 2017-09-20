@@ -11,5 +11,5 @@ def _(src, path, namespace_depth):
         if not os.path.exists(path):
             os.makedirs(path)
 
-        with open(path + os.sep + name + '.csh', 'w') as f:
+        with open(path + os.sep + name + '.cs', 'w') as f:
             f.write(body)

@@ -11,4 +11,3 @@ def _(before_path, after_path, namespace_depth):
     write_src._(src, after_path, namespace_depth)
 
 _(before_path, after_path, namespace_depth)
-print('done')

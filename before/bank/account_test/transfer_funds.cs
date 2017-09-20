@@ -7,5 +7,5 @@ public void transfer_funds()
 
     source.transfer_funds(destination, 100m)
 
-    assert.are_equal(250m, destination.balance)
-    assert.are_equal(100m, source.balance)
+    Assert.AreEqual(250m, destination.balance_prop)
+    Assert.AreEqual(100m, source.balance_prop)
