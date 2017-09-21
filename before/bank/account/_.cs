@@ -1,2 +1,2 @@
 public class account
-    private decimal balance
+    public decimal balance

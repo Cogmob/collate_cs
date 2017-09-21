@@ -1,11 +1,12 @@
 import os
-import read_files
+import read_class_files as read
+import process_class_files as process
 
 def _(path, namespace_depth):
     top = {'namespaces': {}, 'classes': {}}
 
     for root, dirs, files in os.walk(path):
-        if (len(files) == 0):
+        if len(files) == 0:
             continue
         address = root.split(os.sep)
         class_name = address.pop()
@@ -14,10 +15,10 @@ def _(path, namespace_depth):
         for namespace in address:
             if (namespace not in parent['namespaces']):
                 parent['namespaces'][namespace] = {
-                    'namespaces': {},
-                    'classes': {}}
+                        'namespaces': {}, 'classes': {}}
             parent = parent['namespaces'][namespace]
-        class_string = read_files._(address, class_name, files, namespace_depth)
-        parent['classes'][class_name] = class_string
 
+        methods = read._(address, class_name, files)
+        methods = process._(methods, address[namespace_depth:], class_name)
+        parent['classes'][class_name] = methods
     return top
