@@ -1,0 +1,76 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v2.1": [
+      "Microsoft.NETCore.App >= 2.1.0-preview2-25616-02"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\lavery\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\lavery\\.babun\\cygwin\\home\\lavery\\net\\test\\test.csproj",
+      "projectName": "test",
+      "projectPath": "C:\\Users\\lavery\\.babun\\cygwin\\home\\lavery\\net\\test\\test.csproj",
+      "packagesPath": "C:\\Users\\lavery\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lavery\\.babun\\cygwin\\home\\lavery\\net\\test\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\lavery\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp2.1": {
+        "dependencies": {
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.1.0-preview2-25616-02",
+            "autoReferenced": true
+          }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App with version (>= 2.1.0-preview2-25616-02)\r\n  - Found 16 version(s) in nuget.org [ Nearest version: 2.0.0 ]",
+      "libraryId": "Microsoft.NETCore.App",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
+}

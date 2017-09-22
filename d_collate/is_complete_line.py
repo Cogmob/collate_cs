@@ -1,6 +1,6 @@
 def _(line):
     string = ''.join(line).strip()
-    if string[0:3] == 'for':
+    if string[0:4] == 'for ':
         return False
     if string[0:2] == 'if':
         return False
