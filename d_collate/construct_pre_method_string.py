@@ -10,7 +10,7 @@ def _(methods, address, class_name):
         ret += "\n    using NUnit.Framework;"
         ret += "\n"
         ret += "\n    [TestFixture]"
-    ret += "\n    [Serializable]"
+    ret += "\n    [System.Serializable]"
 
 
     if '_.cs' in methods:

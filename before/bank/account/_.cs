@@ -1,2 +1,2 @@
-public class account
+public class account : MonoBehaviour
     public decimal balance

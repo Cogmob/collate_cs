@@ -1,11 +1,13 @@
 #!/bin/zsh
 
 python3 d_collate/_.py
-cd after/bank
-/cygdrive/c/Program\ Files/Mono/bin/csc /r:'C:\Users\lavery\.babun\cygwin\home\lavery\.useful\net-4.5\nunit.framework.dll' account_test.cs account.cs /target:library /out:out.dll | python3 ../../e_filter_test_runner_output/_.py
+cd after
+
+/cygdrive/c/Windows/Microsoft.NET/Framework64/v3.5/csc.exe /r:'C:\Users\lukea\.babun\cygwin\home\.useful\net-3.5\nunit.framework.dll' /target:library /out:out.dll bank\\account_test.cs bank\\account.cs UnityEngine\\MonoBehaviour.cs | python3 ../e_filter_test_runner_output/_.py
+
 if [ $? -eq 0 ]
 then
-    /home/lavery/.useful/net-4.5/nunitlite-runner.exe 'out.dll' --noh --noresult | python3 ../../e_filter_test_runner_output/_.py
+    /home/.useful/net-3.5/nunitlite-runner.exe 'out.dll' --noh --noresult | python3 ../e_filter_test_runner_output/_.py
     if [ $? -eq 0 ]
     then
         print -P '    %F{green}pass%'
