@@ -3,3 +3,4 @@
 *.exe
 after
 local.zsh
+*.egg-info
