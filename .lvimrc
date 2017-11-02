@@ -1,3 +1,10 @@
 let root = expand('%:p:h')
 nmap <leader>j :wall<CR> :call VimuxRunCommand(
-\    'cd ' . root . ' ; clear ; ./test.sh')<CR>
+\ 'cd ' . root . ' ; clear ; ./test.sh')<CR>
+
+nmap <leader>k :wall<CR> :call VimuxRunCommand(
+\ 'cd ' . root . ' ; rm -rf build ; rm -rf dist' .
+\ '; python setup.py sdist bdist_wheel')<CR>
+
+nmap <leader>l :wall<CR> :call VimuxRunCommand(
+\ 'cd ' . root . ' ; twine upload dist/*')<CR>
