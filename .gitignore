@@ -2,4 +2,4 @@
 .tmp
 *.exe
 after
-_.yaml
+local.zsh
