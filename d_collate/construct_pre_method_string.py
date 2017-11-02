@@ -1,23 +1,31 @@
 def _(methods, address, class_name):
-    ret = ''
+    ret = []
 
     if 'using.cs' in methods:
-        ret += '\n'.join(methods['using.cs']) + '\n\n'
+        for line in methods['using.cs']:
+            ret += [line]
+        ret += ['']
         del(methods['using.cs'])
 
-    ret += 'namespace ' + '.'.join(address) + '\n{'
+    ret += ['namespace ' + '.'.join(address)]
+    ret += ['{']
     if 'test' in class_name:
-        ret += "\n    using NUnit.Framework;"
-        ret += "\n"
-        ret += "\n    [TestFixture]"
-    ret += "\n    [System.Serializable]"
+        ret += ["    using NUnit.Framework;"]
+        ret += [""]
+        ret += ["    [TestFixture]"]
+    ret += ["    [System.Serializable]"]
 
 
     if '_.cs' in methods:
-        ret += '\n    ' + '\n    '.join(methods['_.cs'][:-1]) + '\n'
+        for line in methods['_.cs']:
+            ret += ['    ' + line]
         del(methods['_.cs'])
     else:
-        ret += "\n    public class " + class_name
-        ret += "\n    {"
+        ret += ["    public class " + class_name]
 
+    if '}' not in ret[-1]:
+        ret += ["    {"]
+        ret += ["    }"]
+
+    ret = '\n' + '\n'.join(ret[:-1])
     return ret
