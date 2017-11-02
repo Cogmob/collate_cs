@@ -7,7 +7,7 @@ setup(
   author = 'Luke Avery',
   author_email = 'luke.avery@live.co.uk',
   url = 'https://bitbucket.org/Cogbot/collate_cs',
-  download_url = 'https://github.org/Cogmob/collate/archive/0.1.tar.gz',
+  download_url = 'https://github.org/Cogmob/collate_cs/archive/0.1.tar.gz',
   keywords = ['syntax', 'cs', 'csharp'],
   classifiers = [],
 )
