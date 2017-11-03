@@ -8,3 +8,6 @@ nmap <leader>k :wall<CR> :call VimuxRunCommand(
 
 nmap <leader>l :wall<CR> :call VimuxRunCommand(
 \ 'cd ' . root . ' ; twine upload dist/*')<CR>
+
+nmap <leader>y :wall<CR> :call VimuxRunCommand(
+\ 'pip install collate_cs --upgrade')<CR>
