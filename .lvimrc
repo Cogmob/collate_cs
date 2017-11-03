@@ -4,10 +4,11 @@ nmap <leader>j :wall<CR> :call VimuxRunCommand(
 
 nmap <leader>k :wall<CR> :call VimuxRunCommand(
 \ 'cd ' . root . ' ; rm -rf build ; rm -rf dist' .
-\ '; python setup.py sdist bdist_wheel')<CR>
+\ ' ; python setup.py sdist bdist_wheel')<CR>
 
 nmap <leader>l :wall<CR> :call VimuxRunCommand(
-\ 'cd ' . root . ' ; twine upload dist/*')<CR>
+\ 'cd ' . root . ' ; twine upload dist/*' .
+\ ' ; rm -rf build ; rm -rf dist')<CR>
 
 nmap <leader>y :wall<CR> :call VimuxRunCommand(
-\ 'pip install collate_cs --upgrade')<CR>
+\ 'pip install collate_cs --upgrade --no-cache-dir ; collate_cs')<CR>
