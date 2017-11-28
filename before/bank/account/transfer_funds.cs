@@ -1,3 +1,3 @@
-public void transfer_funds(account destination, decimal amount)
+public void _method(account destination, decimal amount)
     destination.deposit(amount)
     withdraw(amount)

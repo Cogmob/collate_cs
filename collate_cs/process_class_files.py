@@ -12,4 +12,4 @@ def _(methods, address, class_name):
         string_methods.append(string_method)
 
     ret += '\n        ' + '\n\n        '.join(string_methods) + '\n    }\n}'
-    return ret
+    return ret[1:]

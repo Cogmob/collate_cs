@@ -1,4 +1,4 @@
-public void transfer_funds()
+public void _method()
     account source = new account()
     source.deposit(200m)
 

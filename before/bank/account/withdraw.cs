@@ -1,2 +1,2 @@
-public void withdraw(decimal amount)
+public void _method(decimal amount)
     balance -= amount
