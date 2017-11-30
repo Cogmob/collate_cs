@@ -14,6 +14,5 @@ def _(src):
         indent = process_line._(lines, line, indent)
     add_close_braces._(lines, indent, 0)
     remove_extra_semicolons._(lines)
-    print(lines)
 
     return join_lines._(finish_semicolons._(lines[1:]))

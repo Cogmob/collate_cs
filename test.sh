@@ -1,7 +1,7 @@
 #!/bin/zsh
 source 'local.zsh'
 
-python3 collate_cs before after 1
+python3 collate_cs before after 1 "//test_project"
 cd after
 
 $csc /r:"$nunit_path" /target:library /out:out.dll bank\\account_test.cs bank\\account.cs UnityEngine\\MonoBehaviour.cs | python3 ../e_filter_test_runner_output/_.py

@@ -2,7 +2,7 @@ import os
 import read_class_files as read
 import process_class_files as process
 
-def _(path, namespace_depth):
+def _(path, namespace_depth, prefix):
     top = {'namespaces': {}, 'classes': {}}
 
     for root, dirs, files in os.walk(path):
@@ -19,6 +19,7 @@ def _(path, namespace_depth):
             parent = parent['namespaces'][namespace]
 
         methods = read._(address, class_name, files)
-        methods = process._(methods, address[namespace_depth:], class_name)
+        methods = process._(
+                methods, address[namespace_depth:], class_name, prefix)
         parent['classes'][class_name] = methods
     return top

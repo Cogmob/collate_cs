@@ -6,10 +6,10 @@ if len(sys.argv) < 4:
     print('collate before_path after_path depth')
     exit()
 
-collate_cs._(sys.argv[1], sys.argv[2], int(sys.argv[3]))
+collate_cs._(sys.argv[1], sys.argv[2], int(sys.argv[3]), sys.argv[4])
 
 
-__version__ = "0.22"
+__version__ = "0.24"
 
 __title__ = "collate_cs"
 __description__ = "thin -> cs"

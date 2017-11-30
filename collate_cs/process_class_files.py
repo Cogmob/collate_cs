@@ -1,7 +1,8 @@
 import construct_pre_method_string
 
-def _(methods, address, class_name):
-    ret = construct_pre_method_string._(methods, address, class_name)
+def _(methods, address, class_name, prefix):
+    ret = prefix
+    ret += construct_pre_method_string._(methods, address, class_name)
 
     string_methods = []
     for name, body in methods.items():
@@ -12,4 +13,4 @@ def _(methods, address, class_name):
         string_methods.append(string_method)
 
     ret += '\n        ' + '\n\n        '.join(string_methods) + '\n    }\n}'
-    return ret[1:]
+    return ret

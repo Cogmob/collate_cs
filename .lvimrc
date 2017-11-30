@@ -1,4 +1,6 @@
 let root = expand('%:p:h')
+" let root = fnamemodify(getcwd(), ':t')
+
 nmap <leader>j :wall<CR> :call VimuxRunCommand(
 \ 'cd ' . root . ' ; clear ; ./test.sh')<CR>
 
