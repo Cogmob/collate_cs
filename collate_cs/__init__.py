@@ -9,7 +9,7 @@ if len(sys.argv) < 4:
 collate_cs._(sys.argv[1], sys.argv[2], int(sys.argv[3]), sys.argv[4])
 
 
-__version__ = "0.24"
+__version__ = "0.25"
 
 __title__ = "collate_cs"
 __description__ = "thin -> cs"

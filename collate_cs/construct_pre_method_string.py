@@ -1,3 +1,5 @@
+import namespace_override as override
+
 def _(methods, address, class_name):
     ret = []
 
@@ -7,6 +9,7 @@ def _(methods, address, class_name):
         ret += ['']
         del(methods['using.cs'])
 
+    address = map(lambda s: override._(s), address)
     ret += ['namespace ' + '.'.join(address)]
     ret += ['{']
     if 'test' in class_name:
