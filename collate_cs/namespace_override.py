@@ -1,4 +1,4 @@
 def _(s):
-    if s is 'Editor':
+    if s == 'Editor':
         return 'EditorNamespace'
     return s

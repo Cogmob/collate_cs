@@ -9,7 +9,7 @@ def _(methods, address, class_name):
         ret += ['']
         del(methods['using.cs'])
 
-    address = map(lambda s: override._(s), address)
+    address = list(map(lambda s: override._(s), address))
     ret += ['namespace ' + '.'.join(address)]
     ret += ['{']
     if 'test' in class_name:
