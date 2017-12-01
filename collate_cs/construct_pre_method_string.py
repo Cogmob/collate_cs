@@ -16,15 +16,19 @@ def _(methods, address, class_name):
         ret += ["    using NUnit.Framework;"]
         ret += [""]
         ret += ["    [TestFixture]"]
-    ret += ["    [System.Serializable]"]
 
 
     if '_.cs' in methods:
-        for line in methods['_.cs']:
+        start = list(methods['_.cs'])
+        if 'interface' not in start[0]:
+            ret += ["    [System.Serializable]"]
+        for line in start:
             ret += ['    ' + line]
         del(methods['_.cs'])
     else:
+        ret += ["    [System.Serializable]"]
         ret += ["    public class " + class_name]
+
 
     if '}' not in ret[-1]:
         ret += ["    {"]
