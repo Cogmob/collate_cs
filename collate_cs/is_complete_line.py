@@ -10,7 +10,5 @@ def _(line):
         return False
     if string[0:2] == '//':
         return False
-    if string == 'get':
-        return False
     # filter for more open than closed brackets
     return True
