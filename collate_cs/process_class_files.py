@@ -5,7 +5,7 @@ def _(methods, address, class_name, prefix):
     ret += construct_pre_method_string._(methods, address, class_name)
 
     string_methods = []
-    for name, body in methods.items():
+    for name, body in sorted(methods.items()):
         string_method = ''
         if 'test' in class_name:
             string_method += "\n        [Test]\n        "
