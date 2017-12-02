@@ -4,7 +4,7 @@ import replace_keywords
 
 def _(address, class_name, files):
     methods = {}
-    for filename in files:
+    for filename in sorted(files):
         if '.cs' not in filename:
             continue
         path = os.sep.join(address) + '/' + class_name + '/' + filename
