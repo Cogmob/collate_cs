@@ -1,7 +1,7 @@
 def _(line):
     string = ''.join(line)
     stripped = string.strip()
-    if "class" in stripped:
+    if " class" in string:
         return False
     if stripped == '':
         return False
