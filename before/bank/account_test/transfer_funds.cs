@@ -1,5 +1,7 @@
 public void _method()
-    account source = new account()
+    account source = new account
+        balance = 0 
+
     source.deposit(200m)
 
     account destination = new account()

@@ -1,18 +1,19 @@
 def _(line):
-    string = ''.join(line).strip()
-    if "class" in string:
+    string = ''.join(line)
+    stripped = string.strip()
+    if "class" in stripped:
         return False
-    if string == '':
+    if stripped == '':
         return False
-    if string[0] == '[':
+    if stripped[0] == '[':
         return False
-    if string[0] == '(':
+    if stripped[0] == '(':
         return False
-    if string[0:2] == '//':
+    if stripped[0:2] == '//':
+        return False
+    if stripped[-1] == ',':
         return False
     if string[-1] == ' ':
-        return False
-    if string[-1] == ',':
         return False
     # filter for more open than closed brackets
     return True
