@@ -4,6 +4,13 @@ import get_new_indent
 
 def _(lines, line, indent):
     new_indent = get_new_indent._(line)
+    empty = True
+    for s in line:
+        if s.strip() is not "":
+            empty = False
+    if empty:
+        new_indent = indent
+
     if new_indent > indent + 1:
         lines.append([new_indent, line, '>'])
         return indent

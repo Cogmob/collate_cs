@@ -5,10 +5,11 @@ public void _method()
 
     source.deposit(200m)
 
-    account destination = new account()
-    destination.deposit(150m)
+    if (source.balance < 10000)
+        account destination = new account()
+        destination.deposit(150m)
 
-    source.transfer_funds(destination, 100m)
+        source.transfer_funds(destination, 100m)
 
-    Assert.AreEqual(250m, destination.balance)
-    Assert.AreEqual(100m, source.balance)
+        Assert.AreEqual(250m, destination.balance)
+        Assert.AreEqual(100m, source.balance)
