@@ -34,5 +34,5 @@ def _(methods, address, class_name):
         ret += ["    {"]
         ret += ["    }"]
 
-    ret = '\n' + '\n'.join(ret[:-1])
+    ret = '\n' + '\n'.join(ret[:-1]) + '\n'
     return ret
