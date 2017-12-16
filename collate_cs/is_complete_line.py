@@ -9,6 +9,8 @@ def _(line):
         return False
     if stripped[0] == '(':
         return False
+    if stripped[0] == '#':
+        return False
     if stripped[0:2] == '//':
         return False
     if stripped[-1] == ',':
