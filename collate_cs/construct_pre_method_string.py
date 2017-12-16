@@ -2,10 +2,16 @@ import namespace_override as override
 
 def _(methods, address, class_name):
     ret = []
+    post = []
 
     if 'using.cs' in methods:
+        add_to = [ret]
         for line in methods['using.cs']:
-            ret += [line]
+            if '---;' not in line:
+                add_to[0] += [line]
+            else:
+                add_to = [post]
+
         ret += ['']
         del(methods['using.cs'])
 
@@ -35,4 +41,4 @@ def _(methods, address, class_name):
         ret += ["    }"]
 
     ret = '\n' + '\n'.join(ret[:-1]) + '\n'
-    return ret
+    return ret, '\n'.join(post)

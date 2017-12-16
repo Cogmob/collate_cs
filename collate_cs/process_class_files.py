@@ -2,7 +2,9 @@ import construct_pre_method_string
 
 def _(methods, address, class_name, prefix):
     ret = prefix
-    ret += construct_pre_method_string._(methods, address, class_name)
+
+    using, postfix = construct_pre_method_string._(methods, address, class_name)
+    ret += using
 
     string_methods = []
     for name, body in sorted(methods.items()):
@@ -13,4 +15,4 @@ def _(methods, address, class_name, prefix):
         string_methods.append(string_method)
 
     ret += '\n        ' + '\n\n        '.join(string_methods) + '\n    }\n}'
-    return ret
+    return ret + '\n' + postfix
