@@ -26,8 +26,6 @@ def _(methods, address, class_name):
 
     if '_.cs' in methods:
         start = list(methods['_.cs'])
-        if len(start) == 0:
-            print(address)
         if 'interface' not in start[0]:
             ret += ["    [System.Serializable]"]
         for line in start:

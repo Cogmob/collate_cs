@@ -4,6 +4,5 @@ def _(files):
     ret = 0
     for file in files:
         if file[-3:] == '.cs':
-            print(file)
             ret = ret + 1
     return ret
